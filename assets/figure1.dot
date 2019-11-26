@@ -1,0 +1,33 @@
+@startuml
+digraph dnssl {
+  layout=dot
+  nodesep=0.5
+  bgcolor=transparent
+
+  cert [style=filled fillcolor=darkslategray3  margin="0.1,0.1" label="Cert Hub"]
+  ems [style=filled fillcolor=antiquewhite margin="0.1,0.1" label="Management\nSystem"]
+  ui [style=filled fillcolor=darkslategray3 margin="0.1,0.1" label="Opera\nDNS UI"]
+  pdns [shape=box style="rounded,filled" fillcolor=orange2 margin="0.2,0.2" label="Hidden Primary\nLord Master\nPowerDNS"]
+  psql [shape=cylinder, style="rounded,filled" margin="0.2,0.2" label="PostgreSQL"]
+  bind1 [style=filled fillcolor=yellowgreen margin="0.1,0.1" label="authoritative\nISC Bind"]
+  bind2 [style=filled fillcolor=yellowgreen margin="0.1,0.1" label="authoritative\nISC Bind"]
+  admin [style=filled fillcolor=darkslategray3 margin="0.1,0.1" label="Adminer"]
+
+  cert -> {ems} [label="CLI" fontsize=9.0 style="dashed" color=slategrey dir=back]
+  ui -> {pdns} [label=API fontsize=9.0]
+  ems -> {pdns} [label=API fontsize=9.0 style="dashed" color=slategrey]
+  ems -> {ui} [label=API fontsize=9.0 style="dashed" color=slategrey]
+  ems -> {bind1} [label="CLI" fontsize=9.0 style="dashed" color=slategrey]
+  ems -> {bind2} [label="CLI" fontsize=9.0 style="dashed" color=slategrey]
+  pdns -> {bind1} [label=AXFR fontsize=9.0]
+  pdns -> {bind2} [label=AXFR fontsize=9.0]
+
+  pdns -> {psql} [label=SQL fontsize=9.0 color=slategrey]
+  ui -> {psql} [label=SQL fontsize=9.0 color=slategrey]
+  admin -> {psql} [label=SQL fontsize=9.0 color=slategrey]
+
+  {rank=same; pdns, psql}
+  {rank=same; cert, ui, ems}
+  {rank=same; bind1, bind2, admin}
+}
+@enduml
