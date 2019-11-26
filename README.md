@@ -53,6 +53,7 @@ We are using:
   - [ ] add some auth proxy to the API to capture the master token issue
   - [ ] better backup/restore and schema bootstapping
 - Certbot
+  - [ ] provide more configurable validation methods
   - [ ] add a real RESTful API for issuance and retrieval
   - [ ] add some auth proxy to the API to capture the master token issue
 - Opera DNS UI
