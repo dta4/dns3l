@@ -16,8 +16,6 @@
 
 ![figure 1](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/iaean/dnssl/init/assets/figure1.dot)
 
-### Motivation and use case
-
 ### Build 'n' Run
 
 ### Configuration
