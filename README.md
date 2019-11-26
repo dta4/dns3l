@@ -1,6 +1,16 @@
 ![](https://github.com/iaean/dnssl/workflows/Dockerization/badge.svg)
 
-## dnssl - dockerized directory service cluster
+## dnssl - dockerized DNS infrastructure with SSL certhub
+
+> PowerDNS website : [powerdns.com][1]  
+> Certbot website : [certbot.eff.org][2]  
+> ISC Bind website : [www.isc.org][3]  
+> Opera DNS UI website : [github.com/operasoftware][4]
+
+[1]: https://powerdns.com/
+[2]: https://certbot.eff.org/
+[3]: https://www.isc.org/downloads/bind/
+[4]: https://github.com/operasoftware/dns-ui
 
 **A docker stack to provide a RESTful DNS infrastructure and SSL certificates.**
 
