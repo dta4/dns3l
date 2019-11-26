@@ -4,7 +4,7 @@
 
 **A docker stack to provide a RESTful DNS infrastructure and SSL certificates.**
 
-![figure 1](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/iaean/dnssl/master/assets/figure1.dot)
+![figure 1](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/iaean/dnssl/init/assets/figure1.dot)
 
 ### Motivation and use case
 
